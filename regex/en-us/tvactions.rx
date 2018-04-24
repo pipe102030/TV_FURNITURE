@@ -1,0 +1,1 @@
+(please|Sr) (?P<Action>hide|show) (?P<DeviceName>.*)

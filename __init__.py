@@ -44,11 +44,11 @@ class IotTVSkill(MycroftSkill):
     def handle_TV_command_intent(self, message):
         action_word = message.data.get("Action")
         LOGGER.info("Command word: " + action_word )
-        if action_word == "up" :
+        if action_word == "show" :
 		    self.speak_dialog("show.tv")
 		    r = requests.get('http://ip_here/lamp?cmd=1')
             
-	elif action_word == "down":
+	elif action_word == "hide":
 		self.speak_dialog("hide.tv")
 		r = requests.get('http://ip_here/lamp?cmd=0')
 	else:
